@@ -35,19 +35,19 @@ import java.time.format.DateTimeFormatter;
  *
  * @author x
  */
-public class AccionDeVenta extends javax.swing.JFrame implements interfaserealizarventa, interfasedeCargadeventa, interfasecargadeventa, Complementodeinterfaceivairpf, interfasecargadecomponentespredefinidosactualizarventa, interfacedeeliminaciondeventa, interfasedeeliminarfactura {
+public class AccionDeVenta1 extends javax.swing.JFrame implements interfaserealizarventa, interfasedeCargadeventa, interfasecargadeventa, Complementodeinterfaceivairpf, interfasecargadecomponentespredefinidosactualizarventa, interfacedeeliminaciondeventa, interfasedeeliminarfactura {
 
     /**
      * Creates new form AccionDeVenta
      */
-    public AccionDeVenta() {
+    public AccionDeVenta1() {
         initComponents();
         tablaVentaMouseClicked();
         verventas();
         verproducto();
         versecretario();
         verfactura();
-        vercliente();
+   
 
     }
     
@@ -244,7 +244,6 @@ private LocalDate fecha = LocalDate.now();
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Mensaje++++>");
 
-        Mensaje.setBackground(new java.awt.Color(255, 255, 255));
         Mensaje.setColumns(20);
         Mensaje.setForeground(new java.awt.Color(0, 0, 0));
         Mensaje.setRows(5);
@@ -488,7 +487,7 @@ private LocalDate fecha = LocalDate.now();
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         MenuSecretarioGUI ms = new MenuSecretarioGUI();
         ms.setVisible(true);
-        AccionDeVenta.this.dispose();
+        AccionDeVenta1.this.dispose();
 
 
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -539,6 +538,28 @@ private LocalDate fecha = LocalDate.now();
                 }
             }
         });
+   
+      TablaVenta.addMouseListener(
+                new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                int fila = TablaVenta.getSelectedRow();
+                String idCliente = "";
+                if (fila >= 0) {
+                    idCliente = (String) TablaVenta.getValueAt(fila, 1);
+                }
+                List<dtocliente> lista1 = verventaobject.EntregarComplementocliente();
+                List<dtocliente> lista2 = verventaobject.buscarcliente(idCliente, lista1);
+                cargarcliente1(lista2);
+
+            }
+
+        }
+        );
+        String textomensaje = Mensaje.getText();
+        Mensaje.setText(
+                textomensaje + "Tabla de clientes se actualizada.");
+    
     }
     /**
      * @param args the command line arguments
@@ -924,12 +945,13 @@ private double preciofijo;
                 textomensaje + "Tabla de clientes se actualizada.");
     }
 
-    public void actualizarcantidadproducto(int cantidad, String ID){
+    public void actualizarcantidadproducto(int cantidadrestada, String ID){
     List<dtoproducto> lista1 = verventaobject.EntregarComplementoproducto();
     List<dtoproducto> lista2 = verventaobject.buscarproducto(ID, lista1);
     dtoproducto productoaactualizar = new dtoproducto();
     for(dtoproducto dtop : lista2){
-    dtop.getC().setCantidad(cantidad);
+        int CantidadBase = dtop.getC().getCantidad();
+    dtop.getC().setCantidad(CantidadBase - cantidadrestada);
         productoaactualizar = dtop;
         
     }

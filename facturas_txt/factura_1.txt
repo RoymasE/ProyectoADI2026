@@ -1,0 +1,50 @@
+========================================
+     AIRES ACONDICIONADOS AUTOMOTRIZ
+              ANTONI PERU
+           Lima, Peru - RUC: XXXXXXXXXX
+    Tel: XXX-XXXX | automotrizantoni@gmail.com
+========================================
+            FACTURA DE VENTA
+========================================
+Codigo Factura : 1
+Fecha          : 2026-06-20
+Estado         : 1
+
+========================================
+           DATOS DEL CLIENTE
+========================================
+ID Cliente     : CLI001
+Nombre         : Juan Perez
+
+========================================
+          DATOS DEL SECRETARIO
+========================================
+ID Secretario  : 1
+Nombre         : Anthony
+Apellido       : Ramirez
+Cedula         : 1234567890
+
+========================================
+          DETALLE DE LA VENTA
+========================================
+Codigo Venta   : 1
+Cantidad       : 1
+Subtotal       : S/ 25.5
+IGV (18%)      : S/ 3.06
+TOTAL          : S/ 25.5
+
+========================================
+              PRODUCTO
+========================================
+Codigo Producto: 1
+Nombre         : Aceite Motor
+Precio Unitario: S/ 25.5
+Estado         : 1
+
+========================================
+  Gracias por su compra en AUTOMOTRIZ
+            ANTONI PERU
+  'Calidad y confianza en cada servicio'
+  Lima, Peru | automotrizantoni@gmail.com
+  Atendido por: Anthony Ramirez
+========================================

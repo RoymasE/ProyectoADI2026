@@ -2,8 +2,8 @@
 use automotrizanthony;
 -- SECRETARIO
 INSERT INTO secretario VALUES
-('SEC001','Anthony','Ramirez','1234567890','0991111111','Av. Principal 123',1),
-('SEC002','Maria','Lopez','0987654321','0992222222','Calle Central 456',1);
+(1,'Anthony','Ramirez','1234567890','0991111111','Av. Principal 123',1),
+(2,'Maria','Lopez','0987654321','0992222222','Calle Central 456',1);
 
 -- PRODUCTO
 INSERT INTO producto VALUES

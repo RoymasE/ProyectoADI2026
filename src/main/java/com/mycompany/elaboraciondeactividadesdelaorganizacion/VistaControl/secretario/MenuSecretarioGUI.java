@@ -51,6 +51,11 @@ public class MenuSecretarioGUI extends javax.swing.JFrame {
         });
 
         jButton2.setText("Acciones con el inventario");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Acciones con la venta");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -60,6 +65,11 @@ public class MenuSecretarioGUI extends javax.swing.JFrame {
         });
 
         jButton4.setText("Acciones con la factura");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Salir");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -148,12 +158,25 @@ public class MenuSecretarioGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    AccionDeVenta2 av = new AccionDeVenta2();
+    AccionDeVenta1 av = new AccionDeVenta1();
     av.setVisible(true);
         MenuSecretarioGUI.this.dispose();
         
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        AccionesdelInventario aip = new AccionesdelInventario();
+        aip.setVisible(true);
+        MenuSecretarioGUI.this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+     ActionFactura af = new ActionFactura();
+     af.setVisible(true);
+        MenuSecretarioGUI.this.dispose();
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

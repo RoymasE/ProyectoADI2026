@@ -1,0 +1,28 @@
+========================================
+            FACTURA DE VENTA
+========================================
+Codigo Factura: 5
+Fecha: 25/06/2026
+Estado: Activo
+
+DATOS DEL CLIENTE
+Nombre: Juan
+Apellido: Pérez
+DNI: 12345678
+Telefono: 999999999
+
+DETALLE DE LA VENTA
+Codigo Venta: 3
+Cantidad: 1
+Subtotal: S/ 141.6
+IGV: S/ 1.18
+Total: S/ 142.78
+
+PRODUCTO
+Codigo Producto: 3
+Nombre: Producto
+Marca: Marca
+Precio: S/ 141.6
+
+Gracias por su compra
+========================================
